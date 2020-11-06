@@ -7,11 +7,11 @@
     <title>contact form</title>
 </head>
 <body>
-    <div id="container">
+    <div class="container">
         <div class="form-wrap">
             <h1>Contact form</h1> 
             <p>please fill out this form</p>
-            <form>
+            <form class="contact-form" name="contact-form">
                 <div class="form-group">
                     <label for="firstname">First Name</label>
                     <input type="text" id="firstname" name="firstname"/> 
@@ -25,13 +25,20 @@
                     <input type="phonenumber" name="phonenumber" id="password"/>
                 </div>
                 <button type="submit" class="btn">Submit</button>
-                <p class="bottom-text">
-                    By clicking this Submit button, you agree to our
-                    <a href="#">Terms and Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                </p>
             </form>
        </div>
+       <div class="contact-list">
+            <h1 class="title">Contact List</h1>
+            <ol class="list">
+                <li><span>Chilaka Precious: 0805678949</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span>Davies Aminat: 08098765432</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span>Kolade Chisom: 08096789065</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span>Okoye Lara: 08045678321</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span>Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span>Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span>Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+            </ol>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
