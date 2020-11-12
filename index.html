@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,32 +11,32 @@
         <div class="form-wrap">
             <h1>Contact form</h1> 
             <p>please fill out this form</p>
-            <form class="contact-form" name="contact-form">
+            <form class="contact-form" name="contactForm">
                 <div class="form-group">
                     <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname"/> 
+                    <input type="text" class="input" id="firstname" name="firstname"/> 
                 </div>
                 <div class="form-group">
                     <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname"/>
+                    <input type="text" class="input" id="lastname" name="lastname"/>
                 </div>
                 <div class="form-group">
                     <label for="phonenumber">Phone Number</label>
-                    <input type="phonenumber" name="phonenumber" id="password"/>
+                    <input type="phonenumber" class="input" name="phonenumber" id="password"/>
                 </div>
-                <button type="submit" class="btn">Submit</button>
+                <input type="submit" class="btn" name="sumbit_btn" value="Submit"/>
             </form>
        </div>
        <div class="contact-list">
             <h1 class="title">Contact List</h1>
-            <ol class="list">
-                <li><span>Chilaka Precious: 0805678949</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
-                <li><span>Davies Aminat: 08098765432</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
-                <li><span>Kolade Chisom: 08096789065</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
-                <li><span>Okoye Lara: 08045678321</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
-                <li><span>Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
-                <li><span>Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
-                <li><span>Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+            <ol id="list" class="list">
+                <li><span class="details">Chilaka Precious: 0805678949</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span class="details">Davies Aminat: 08098765432</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span class="details">Kolade Chisom: 08096789065</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span class="details">Okoye Lara: 08045678321</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span class="details">Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span class="details">Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
+                <li><span class="details">Omobo Musa: 08125678032</span><button type="edit" class="btn list-btn">Edit</button> <button type="delete" class="btn list-btn">Delete</button></li>
             </ol>
         </div>
     </div>
