@@ -4,9 +4,13 @@
     padding:0;
   }
 
+  html {
+    background-image: linear-gradient(0deg, rgba(19, 18, 18, 0.5), rgba(26, 25, 25, 0.5)), url(imgs/showcase.jpg);
+    min-height: 100%;
+  }
+
   body {
     font-family: 'Raleway',sans-serif;
-    background: hsl(14, 98%, 51%);
     color: #fff;
     line-height: 1.8rem;
   }
@@ -22,9 +26,8 @@
   }
 
   .form-wrap {
-    background: #fff;
     padding: 15px 25px;
-    color: #333;
+    color: rgb(247, 243, 243);
     width: 100%;
   }
 
@@ -35,24 +38,47 @@
   }
 
   .form-wrap .form-group {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 
-  .form-wrap .form-group label{
+
+  .form-group .details {
     display: block;
-    color: #666;
   }
 
-  .form-wrap .form-group input{
+  .form-group .input{
     width: 100%;
     padding: 10px;
-    border: #ddd 1px solid;
-    border-radius: 5px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 10px;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
   }
 
-  .form-wrap button {
+  .form-group .input::placeholder {
+    color: rgba(245, 198, 177, 0.5);
+  }
+
+  .contact-form .btn {
+    margin-top: 20px;
+    border-radius:20px;
+    padding: 10px;
+    width: 25%;
     display: block;
-    width: 20%;
+    align-self: center;
+    outline: none;
+    background-color: rgb(27, 27, 27);
+    color:   rgb(245, 198, 177, 0.5);
+    border: 1px solid  rgb(245, 198, 177, 0.5);
+    font-size: 15px;
+  }
+
+ /* .form-wrap button {
+    display: block;
+    width: 10%;
     display: inline-block;
     padding: 5px;
     margin-top: 20px;
@@ -60,20 +86,21 @@
     background: #fd570a;
     cursor: pointer;
     border: none;
-  }
+  } */
 
   .form-wrap button:hover {
     background: rgb(184, 51, 3)
   }
 
   .container .contact-list {
-    background-color: #d1cdcd;
+    background-color: rgb(27, 27, 27);
     padding: 15px 25px;
     color: #333;
   }
 
   .contact-list {
       overflow-y:scroll;
+      color:  rgb(27, 27, 27);
       max-height: 300px;
   }
 
@@ -83,15 +110,16 @@
   }
 
   .contact-list .list {
-    font-size: 12px;
+    font-size: 15px;
+    color:rgba(245, 198, 177, 0.5);
+    font-size: 18px;
   }
 
   .list .list-btn {
     margin-left: 12px;
-    display: block;
-    width: 20%;
+    width: 13%;
     display: inline-block;
-    padding: 5px;
+    padding: 3px;
     margin-top: 20px;
     color: #fff;
     background: #fd570a;
@@ -100,7 +128,7 @@
   }
 
 li {
-  color: green;
+  color:rgba(230, 78, 7, 0.9);
 }
 
 
