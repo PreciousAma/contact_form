@@ -3,6 +3,8 @@ const firstName = contactForm.elements.firstname;
 const lastName = contactForm.elements.lastname;
 const phoneNumber = contactForm.elements.phonenumber;
 const submitButton = contactForm.elements.submit_btn;
+const cancelButton = contactForm.elements.cancel_btn;
+ 
 const contactList = document.getElementById("list");
 
 let contactListState = [];
@@ -13,10 +15,22 @@ let editState = {
     editId: null
 }
 
+const cancel = (event) => {
+    editState = {
+        edit: false,
+        editNode: null,
+        editId: null
+    }
+    event.target.classList.remove("show-btn");
+    // console.log("i have been clicked");
+ };
+
+cancelButton.addEventListener("click", cancel); 
+
 const formatBtn = (listNode, contactId) => {
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
-    editBtn.classList.add("btn", "list-btn");
+    editBtn.classList.add("btn", "list-btn",);
     editBtn.setAttribute("data-id", contactId);
 
     const deleteBtn = document.createElement("button");
@@ -26,10 +40,12 @@ const formatBtn = (listNode, contactId) => {
 
     listNode.appendChild(editBtn);
     listNode.appendChild(deleteBtn);
-
+    
     editBtn.addEventListener("click", editContact);
     deleteBtn.addEventListener("click", deleteContact);
 }
+
+ 
 
 function addContact(event) {
     event.preventDefault();
@@ -53,6 +69,8 @@ function addContact(event) {
             editId: null
         }
 
+        cancelButton.classList.remove("show-btn");
+
     } else {
         const contact = {
             firstname: firstName.value,
@@ -72,6 +90,7 @@ function addContact(event) {
 }
 
 contactForm.addEventListener("submit", addContact);
+// contactForm.addEventListener("click", cancel);
 
 function createContact(contact) {
     const listItem = document.createElement("li");
@@ -97,7 +116,16 @@ const editContact = (event) => {
     editState.edit = true;
     editState.editNode = event.target.parentElement;
     editState.editId = editId;
+    cancelButton.classList.add("show-btn");
 }
+
+// const cancel = (event) => {
+//     editState = {
+//         edit: false,
+//         editNode: null,
+//         editId: null
+//     }
+// }
 
 const deleteContact = (event) => {
     const filteredContactList = contactListState.filter((contact) => {return event.target.dataset.id != contact.id} );
@@ -106,9 +134,7 @@ const deleteContact = (event) => {
     localStorage.setItem("contacts", JSON.stringify(contactListState));
 }
 
-const cancel = (event) => {
-    
-}
+
 
 const contacts = JSON.parse(localStorage.getItem("contacts"));
 contactListState = [...contacts];
