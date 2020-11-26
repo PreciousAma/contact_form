@@ -2,14 +2,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>contact form</title>
 </head>
 <body>
     <div class="container">
         <div class="form-wrap">
             <h1>Contact form</h1> 
-            <p>please fill out this form</p>
+            <p class="sub_text">Please, Kindly fill out this form</p>
             <form class="contact-form" name="contactForm">
                 <div class="form-group">
                     <!-- <label for="firstname" class="details">First Name</label> -->
@@ -23,8 +23,11 @@
                     <!-- <label for="phonenumber"  class="details">Phone Number</label> -->
                     <input type="phonenumber" required class="input" name="phonenumber" id="password" placeholder="Phone Number"/>
                 </div>
-                <input type="submit" class="btn" name="sumbit_btn" value="Submit"/>
-                <input type="button" class="cancelbtn btn" name="cancel_btn" value="Cancel"/>
+                <div class="btn_home">
+                    <input type="submit" class="btn submit_btn" name="sumbit_btn" value="Submit"/>
+                    <input type="button" class="cancelbtn btn" name="cancel_btn" value="Cancel"/>
+                </div>
+               
             </form>
        </div>
        <div class="contact-list">
@@ -33,6 +36,6 @@
             </ol>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
